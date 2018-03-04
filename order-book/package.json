@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ag-grid": "^16.0.1",
+    "ag-grid-react": "^16.0.0",
     "autoprefixer": "7.1.6",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
@@ -22,6 +24,7 @@
     "react": "^16.2.0",
     "react-dev-utils": "4.2.1",
     "react-dom": "^16.2.0",
+    "react-dom-factories": "^1.0.2",
     "sass-loader": "^6.0.7",
     "source-map-loader": "^0.2.1",
     "style-loader": "0.19.0",
@@ -40,7 +43,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint-fix": "tslint --fix src/**/*.ts src/**/*.tsx -t verbose"
   },
   "devDependencies": {
     "@types/jest": "^22.1.4",
@@ -59,8 +63,8 @@
       "<rootDir>/config/polyfills.js"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+      "<rootDir>/src/test/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/src/test/**/?(*.)(spec|test).ts?(x)"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
