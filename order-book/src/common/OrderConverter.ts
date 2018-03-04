@@ -1,6 +1,6 @@
-import {Order} from "./types/Order";
-import {replaceAll} from "../../../common/StringUtils";
-import {Orders} from "./types/Orders";
+import {Order} from "../application/content/orderList/types/Order";
+import {replaceAll} from "./StringUtils";
+import {Orders} from "../application/content/orderList/types/Orders";
 
 export default function convert(dataString: string): Orders {
     const rawOrders: any[] = getOrders(dataString);

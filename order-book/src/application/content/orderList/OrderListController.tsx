@@ -1,7 +1,7 @@
 import React from "react";
 import OrderList from "./OrderList";
 import {Order} from "./types/Order";
-import convert from "./OrderConverter";
+import convert from "../../../common/OrderConverter";
 import "./styles/orderBook.scss";
 import {Orders} from "./types/Orders";
 import Timer = NodeJS.Timer;
